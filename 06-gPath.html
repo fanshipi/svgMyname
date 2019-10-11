@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear infinite;
+        }
+
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <path d="M 18,18 L 40,18 L 40,2 L 61,28 L 40,54 L40,38 L 18,38 Z">
+                <path d="M 50,30 L 80,8 L 50,32 L 15,22 L 89,100 L 45,80 L 18,38 Z">
+                    <path d="M 18,18 L 40,18 L 40,2 L 61,28 L 40,54 L40,38 L 18,38 Z">
+        </g>
+    </svg>
+</body>
+
+</html>

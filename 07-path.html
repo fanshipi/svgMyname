@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width:800px;
+            height:800px;
+            margin-top:180px;
+        }
+        svg path {
+            stroke-width: 3pt;
+        }
+
+        @keyframes offset {
+            to {
+                stroke-dashoffset: 0px;
+            }
+        }
+
+        .drop,
+        .stick,
+        .inside-r,
+        .inside-l,
+        .outline {
+            animation: offset 2s linear forwards;
+        }
+
+        .drop {
+            /* dasharrary:实线 虚线 */
+            /* dashoffset: 移动距离*/
+            stroke-dasharray: 1020px;
+            stroke-dashoffset: 1020px;
+        }
+        .stick {
+            stroke-dasharray:1020px;
+            stroke-dashoffset:1020px;
+            animation-delay:0.4s;
+        }
+        .outline {
+            stroke-dasharray:800px;
+            stroke-dashoffset:800px;
+            animation-delay:1.8s;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <svg width="100%" height="100%">
+        <g fill="none">
+            <!-- <path d="M10,3 L20,3 L30,3 L40,3 L50,3 L45,10 L65,20 L75,30 L85,40 L85,50 L85,60 L85,70 L85,80 Z" class="drop"
+                stroke='#f10215' /> -->
+            <path d="M8,3 L20,3 L50,3 L63,3 L10,20 L10,76 L10,20 L30,20 L30,76 L21,65 L35,38 L36,20 L36,76 L36,20 L55,20 L55,76 L48,48 L55,50" class="stick"
+                stroke='skyblue' transform="translate(100,0)" />
+            <path d="M10,3 L26,73 L23,6 L15,70 L10,66 L5,63 L30,6 L43,6 L43,80 L38,75 L30,30 L36,30 L30,46 L36,46 L33,20 L32,74 L33,73 L48,10 L58,10 L50,20 L54,35 L48,36 L48,11 L48,20 L48,98" class="outline"
+                stroke='skyblue' transform="translate(200,0)"/>
+        </g>
+    </svg>
+</div>
+</body>
+
+</html>
